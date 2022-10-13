@@ -1,1 +1,1 @@
-Hello from kontributing
+Hello from contributing
