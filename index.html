@@ -28,6 +28,10 @@
         td {
             border-bottom: 0.2px solid rgb(172, 161, 209);
         }
+
+        form {
+            margin-top: 20px;
+        }
     </style>
 </head>
 
@@ -129,6 +133,44 @@
                 <a href="https://wa.me/+628598614712" class="contact-text-list">
                     <img src="Assets/image/telepon-7745.png" alt="WA Logo" width="30" height="30">
                 </a>
+            </div>
+            <div class="form">
+                <form>
+                    <fieldset>
+                        <legend>Send Me Message</legend>
+                        <p>
+                            <input type="text" name="nama" placeholder="Your name..." />
+                        </p>
+                        <p>
+                            <input type="number" name="number" placeholder="Telepon Number..." />
+                        </p>
+                        <p>
+                            <input type="email" name="email" placeholder="Your email..." />
+                        </p>
+                        <p>
+                            <input type="password" name="password" placeholder="Password..." />
+                        </p>
+                        <p>
+                            <label><input type="radio" name="jenis_kelamin" value="laki-laki" /> Laki-laki</label>
+                            <label><input type="radio" name="jenis_kelamin" value="perempuan" /> Perempuan</label>
+                        </p>
+                        <p>
+                            <select name="agama">
+                                <option value="pilih">Pilih agama</option>
+                                <option value="islam">Islam</option>
+                                <option value="kristen">Kristen</option>
+                                <option value="hindu">Hindu</option>
+                                <option value="budha">Budha</option>
+                            </select>
+                        </p>
+                        <p>
+                            <textarea name="message" placeholder="Ketik pesan mu disini..."></textarea>
+                        </p>
+                        <p>
+                            <input type="submit" name="submit" value="Kirim" />
+                        </p>
+                    </fieldset>
+                </form>
             </div>
         </section>
         <!-- end contact -->
