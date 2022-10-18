@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Item</title>
+</head>
+
+<body style="background-color: rgb(47, 39, 97); color:white;">
+    <div class="container">
+        <section class="item-input">
+            <div class="heading">
+                <h2>Form Pendaftaran Balap Karung Internasional</h2>
+            </div>
+            <div class="content">
+                <form>
+                    <fieldset>
+                        <legend>
+                            <h1>Formulir Pendaftaran Siswa</h1>
+                        </legend>
+                        <table>
+                            <tr>
+                                <td>Nama</td>
+                                <td>:</td>
+                                <td><input type="name" name="nama" required /><br /></td>
+                            </tr>
+
+                            <tr>
+                                <td>Tempat/Tanggal Lahir</td>
+                                <td>:</td>
+                                <td><input type="name" name="tempatLahir" required /> <input type="date"
+                                        name="tanggal" /></td>
+                            </tr>
+
+                            <tr>
+                                <td>Agama</td>
+                                <td>:</td>
+                                <td><select name="agama" required>
+                                        <option value="islam"> Islam</option>
+                                        <option value="kristen"> Kristen</option>
+                                        <option value="katolik"> Katolik</option>
+                                        <option value="budha"> Budha</option>
+                                        <option value="hindu"> Hindu</option>
+                                    </select></td>
+                            </tr>
+
+                            <tr>
+                                <td>Alamat</td>
+                                <td>:</td>
+                                <td><textarea name="komentar" required rows="4" cols="50"></textarea> </td>
+                            </tr>
+
+                            <tr>
+                                <td>No Telp/Hp</td>
+                                <td>:</td>
+                                <td><input type="number" name="number" required /></td>
+                            </tr>
+
+                            <tr>
+                                <td>Jenis Kelamin</td>
+                                <td>:</td>
+                                <td><input type="radio" name="jenisKelamin" /> Pria
+                                    <input type="radio" name="jenisKelamin" /> Wanita
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>Kemampuan</td>
+                                <td>:</td>
+                                <td><input type="checkbox" name="skill" /> Melompat </input>
+                                    <input type="checkbox" name="skill" /> Berlari </input>
+                                    <input type="checkbox" name="skill" /> Lainnya </input>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>Pas Foto</td>
+                                <td>:</td>
+                                <td><input type="file" name="foto" required /></td>
+                            </tr>
+
+                            <tr>
+                                <td><input type="submit" name="submit" value="DAFTAR" /></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+
+                        </table>
+                    </fieldset>
+                </form>
+            </div>
+        </section>
+        <section class="item-display">
+            <div class="heading">
+                <h2>Display</h2>
+            </div>
+            <div class="content">
+                <fieldset>
+                    <p>Selamat, anda berhasil mendaftar lomba balap karung internasional...</p>
+                    <p>Berikut data-data yang anda daftarkan...</p>
+
+                    <table>
+                        <tr>
+                            <th>Nama</th>
+                            <td>: Hariono</td>
+                        </tr>
+                        <tr>
+                            <th>Tempat/Tanggal Lahir</th>
+                            <td>: New York, 29 Februari 2023</td>
+                        </tr>
+                        <tr>
+                            <th>Agama</th>
+                            <td>: Islam</td>
+                        </tr>
+                        <tr>
+                            <th>Alamat</th>
+                            <td>: Bandar Seri Begawan</td>
+                        </tr>
+                        <tr>
+                            <th>No Telp/Hp</th>
+                            <td>: 0871917251819</td>
+                        </tr>
+                        <tr>
+                            <th>Jenis Kelamin</th>
+                            <td>: Pria</td>
+                        </tr>
+                        <tr>
+                            <th>Kemampuan</th>
+                            <td>: Melompat, Berlari</td>
+                        </tr>
+                        <tr>
+                            <th>Pas Foto</th>
+                            <td>: <img
+                                    src="https://cdn0-production-images-kly.akamaized.net/qRJpbZp-S6JomOlE94cqH1125VM=/640x853/smart/filters:quality(75):strip_icc():format(jpeg)/kly-media-production/medias/3465342/original/073941600_1621997251-5.jpg"
+                                    alt="PAS FOTO" width="90" height="120">
+                    </table>
+
+                </fieldset>
+            </div>
+        </section>
+        <p>
+            <a href="./itemList.html"><button style="padding:10px;">Lihat Daftar Peserta</button></a>
+        </p>
+    </div>
+</body>
+
+</html>
