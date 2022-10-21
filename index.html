@@ -5,11 +5,126 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portofolio</title>
+    <title>CSS DAY 3</title>
+    <link rel="stylesheet" href="popularproducts.css">
+    <style>
+        body {
+            background-color: rgb(0, 0, 0);
+            color: white;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        p::first-line {
+            font-size: larger;
+            font-weight: bold;
+        }
+
+        img {
+            height: 220px;
+            width: 150px;
+        }
+
+        .card {
+            display: grid;
+            grid-template-columns: auto auto auto;
+        }
+
+        .card>div {
+            padding: 10px;
+            background-color: rgb(69, 3, 156);
+            text-align: center;
+            border: solid;
+            border-radius: 20%;
+            margin-left: 50px;
+            margin-right: 50px;
+            transition: 0.2s;
+        }
+
+        .card>div:hover {
+            transform: scale(1.1);
+        }
+
+
+        div,
+        div:nth-child(-n+3) {
+            margin-top: 0;
+        }
+
+        div:nth-child(n+4) {
+            margin-top: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        div:nth-child(n+7) {
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+    </style>
 </head>
 
 <body>
-
+    <div class="container">
+        <h1>Popular Products</h1>
+        <div class="card">
+            <div>
+                <img src="./hp.png" alt="">
+                <p>Handpone
+                    <br>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Esse, corrupti!
+                </p>
+            </div>
+            <div>
+                <img src="./hp.png" alt="">
+                <p>Handpone
+                    <br>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Esse, corrupti!
+                </p>
+            </div>
+            <div>
+                <img src="./hp.png" alt="">
+                <p>Handpone
+                    <br>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Esse, corrupti!
+                </p>
+            </div>
+            <div>
+                <img src="./hp.png" alt="">
+                <p>Handpone
+                    <br>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Esse, corrupti!
+                </p>
+            </div>
+            <div>
+                <img src="./hp.png" alt="">
+                <p>Handpone
+                    <br>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Esse, corrupti!
+                </p>
+            </div>
+            <div>
+                <img src="./hp.png" alt="">
+                <p>Handpone
+                    <br>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Esse, corrupti!
+                </p>
+            </div>
+            <div>
+                <img src="./hp.png" alt="">
+                <p>Handpone
+                    <br>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Esse, corrupti!
+                </p>
+            </div>
+            <div>
+                <img src="./hp.png" alt="">
+                <p>Handpone
+                    <br>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Esse, corrupti!
+                </p>
+            </div>
+            <div>
+                <img src="./hp.png" alt="">
+                <p>Handpone
+                    <br>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Esse, corrupti!
+                </p>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>
