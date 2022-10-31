@@ -1,0 +1,4 @@
+1. Header, Sidebar, Beranda-Video
+2. Navigation, Beranda
+3. Navigation -> Header, Sidebar
+   Beranda -> Video

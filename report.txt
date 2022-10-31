@@ -1,0 +1,7 @@
+Angular adalah framework javascript yang memungkinkan untuk membuat Single-Page-Applications (SPAs) reaktif. angular memungkinkan sebuah single-page dapat seolah-olah berpindah-pindah ke page lainnya, angular hanya menggunakan satu file HTML dan beberapa Typescript. Angular memuat file-file tersebut dibackgroud, jadi user tidak akan kehilangan pengalamannya dalam penggunaan web-application reaktif.
+
+Module adalah sebuah container untuk gabungan dari component yang berhubungan.
+
+Component adalah blok penyusun UI paling dasar dari aplikasi angular.
+
+Hubungan antara component dan module satu sama lain dimana di dalam module, diisi oleh kelompok component yang saling berhubungan. sementara component membutuhkan module untuk mengidentifikasi component lain yang memiliki hubungan yang sama.
