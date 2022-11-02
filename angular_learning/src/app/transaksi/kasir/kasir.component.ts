@@ -43,7 +43,7 @@ export class KasirComponent implements OnInit {
 
   addItem(item:item){
     const duplicate = this.selectedItems.findIndex(({id}) => id === item.id);
-    if(duplicate > 0){this.selectedItems[duplicate].amount += 1}
+    if(duplicate >= 0){this.selectedItems[duplicate].amount += 1}
     else{this.selectedItems.push({...item, amount: 1})}
   }
 }
