@@ -1,0 +1,35 @@
+* {
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+
+.navbar {
+    height: 80px;
+    width: 100%;
+    background-color: #256D85;
+}
+
+.navbar-left {
+    float: left;
+    margin: 0px 25px;
+}
+
+.navbar-right {
+    float: right;
+    height: 80px;
+}
+
+.navbar-right a {
+    text-decoration: none;
+    color: #DFF6FF;
+    padding: 2em;
+    line-height: 80px;
+}
+
+.navbar-right a:hover {
+    background-color: #06283D;
+}
+
+.transaksi {
+    margin: 25px;
+}
+

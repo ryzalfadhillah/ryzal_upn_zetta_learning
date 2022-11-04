@@ -1,0 +1,30 @@
+ul{
+    text-align: center;
+    list-style-type:none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    border: 1px solid;
+    
+}
+
+li{
+    width: 250px;
+    height: 100px;
+    border: 1px solid;
+    background-color: #256D85;
+    margin: 10px;
+    
+    justify-content: center;
+    align-items: center;
+}
+
+h1{
+    text-align: center;
+}
+
+li:hover{
+    background-color: #47B5FF;
+    scale: 1.1;
+    
+}
