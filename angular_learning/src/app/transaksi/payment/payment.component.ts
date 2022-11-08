@@ -1,5 +1,6 @@
-import { Component, OnInit, Input, Output, EventEmitter, SimpleChange, AfterContentChecked} from '@angular/core';
-import { selecteditem } from '../kasir/kasir.component';
+import { Component, OnInit, AfterContentChecked} from '@angular/core';
+import { Observable, map, pipe } from 'rxjs';
+import { TransaksiService, Selecteditem } from '../transaksi.service'
 
 @Component({
   selector: 'app-payment',
@@ -8,29 +9,26 @@ import { selecteditem } from '../kasir/kasir.component';
 })
 export class PaymentComponent implements OnInit, AfterContentChecked {
 
-  constructor() { }
+  public items : Observable<Selecteditem[]>
+  public total : Observable<number>
+
+  constructor(private transaksiService: TransaksiService) {
+    this.items = this.transaksiService.selectedItems$
+    this.total = this.transaksiService.selectedItems$.pipe(
+      map((items) => items.reduce((total,item) => total += item.amount * item.price, 0))
+    )
+  }
 
   ngOnInit(): void {
   }
 
-  @Input() items!: selecteditem[];
-  @Output () itemChanges : EventEmitter<selecteditem[]> = new EventEmitter <selecteditem[]>;
-
-  public total :number = 0;
-
   ngAfterContentChecked(): void {
-    console.log("tes")
-    this.total = this.items.reduce((total, item) => total += item.amount * item.price , 0)
+    this.total = this.transaksiService.selectedItems$.pipe(
+      map((items) => items.reduce((total,item) => total += item.amount * item.price, 0))
+    )
   }
 
-  removeItem(itemToBeRemoved:selecteditem){
-    const itemIndex = this.items.findIndex(({id}) => id ===itemToBeRemoved.id)
-    const itemRef = this.items[itemIndex]
-    if(this.items[itemIndex].amount>1){
-      this.items[itemIndex].amount-=1
-    }
-    else{
-      this.items.splice(itemIndex,1);
-    }
+  removeitem(item: Selecteditem) {
+    this.transaksiService.removeItem(item)
   }
 }

@@ -1,14 +1,14 @@
 <h1>Payment</h1>
 <table>
-    <tr *ngFor="let item of items">
+    <tr *ngFor="let item of (items| async)">
         <td><span>{{ item.amount }} x {{item.name}}</span></td>
         <td><span>Rp. {{item.price}}</span> </td>
-        <td> <button type="button" class="btn btn-outline" (click)="removeItem(item)"> Remove</button></td>
+        <td> <button type="button" class="btn btn-outline" (click)="removeitem(item)"> Remove</button></td>
     </tr>
     <tr class="tot">
-        <ng-template *ngIf="items.length >0 then totalPayment; else noItem"></ng-template>
+        <ng-template *ngIf="(items | async)?.length then totalPayment; else noItem"></ng-template>
         <ng-template #totalPayment>
-            <td colspan="3"> Total : Rp.{{total}}</td>
+            <td colspan="3"> Total : Rp.{{total | async | currency : 'IDR' : 'symbol-narrow' : '2.2'}}</td>
         </ng-template>
         <ng-template #noItem>
             <td> No Item Selected</td>

@@ -1,7 +1,7 @@
 <menu>
     <h1>Menu</h1>
-    <ul #bgsecondary>
-        <li *ngFor="let item of items" (click)="onAddItem.emit(item)">
+    <ul>
+        <li *ngFor="let item of (items | async)" (click)="addItem(item)">
             <h3>{{ item.name}}</h3>
             <p>
                 Rp. {{item.price}}
