@@ -13,6 +13,10 @@
     margin: 0px 25px;
 }
 
+.navbar-left h1{
+    color: rgb(43, 255, 0);
+}
+
 .navbar-right {
     float: right;
     height: 80px;
@@ -27,6 +31,7 @@
 
 .navbar-right a:hover {
     background-color: #06283D;
+    color: rgb(43, 255, 0);
 }
 
 .transaksi {

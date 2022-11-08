@@ -1,0 +1,31 @@
+<h1>Employee</h1>
+<table mat-table [dataSource]="employs">
+
+    <ng-container matColumnDef="id">
+        <th mat-header-cell *matHeaderCellDef> ID </th>
+        <td mat-cell *matCellDef="let emp"> {{emp.id}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="name">
+        <th mat-header-cell *matHeaderCellDef> NAME </th>
+        <td mat-cell *matCellDef="let emp"> {{emp.name}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="position">
+        <th mat-header-cell *matHeaderCellDef> POSITION </th>
+        <td mat-cell *matCellDef="let emp"> {{emp.position}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="availability">
+        <th mat-header-cell *matHeaderCellDef> AVAILABILITY </th>
+        <td mat-cell *matCellDef="let emp"> {{emp.availability}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="action">
+        <th mat-header-cell *matHeaderCellDef> ACTION </th>
+        <td mat-cell *matCellDef="let emp"> <a [routerLink]="['..','detail' ,emp.id]"> {{emp.action}}</a> </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>

@@ -5,19 +5,14 @@ import { PaymentComponent } from './transaksi/payment/payment.component';
 
 const routes: Routes = [
   {
-    path: '',
+    path: 'kasir',
     loadChildren: () => import('./transaksi/transaksi.module').then(module => module.TransaksiModule)
   },
 
   {
-    path: 'menu',
-    component: MenuComponent
+    path: 'employee',
+    loadChildren: () => import('./employee/employee.module').then(module => module.EmployeeModule)
   },
-  
-  {
-    path: 'payment',
-    component: PaymentComponent
-  }
 ];
 
 @NgModule({
