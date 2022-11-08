@@ -12,8 +12,11 @@ export interface Employee {id :string}
         {id : 'EMP0001' , name : 'Udin Yang Pertama', position :'CEO', availability :  'Available' ,action : 'view detail'},
         {id : 'EMP0002' , name : 'Udin Yang Kedua', position :'Manager', availability :  'Available' ,action : 'view detail'},
         {id : 'EMP0003' , name : 'Udin Yang Ketiga', position :'Kasir', availability :  'Available' ,action : 'view detail'},
-        {id : 'EMP0004' , name : 'Udin Yang Kempat', position :'Barista', availability :  'Available' ,action : 'view detail'},
-        {id : 'EMP0005' , name : 'Udin Yang Kelima', position :'Chef', availability :  'Available' ,action : 'view detail'}
+        {id : 'EMP0004' , name : 'Udin Yang Kempat', position :'Kasir', availability :  'Not Available' ,action : 'view detail'},
+        {id : 'EMP0005' , name : 'Udin Yang Kelima', position :'Chef', availability :  'Available' ,action : 'view detail'},
+        {id : 'EMP0006' , name : 'Udin Yang Keenam', position :'Chef', availability :  'Not Available' ,action : 'view detail'},
+        {id : 'EMP0007' , name : 'Udin Yang Ketujuh', position :'Barista', availability :  'Available' ,action : 'view detail'},
+        {id : 'EMP0008' , name : 'Udin Yang Kedelapan', position :'Barista', availability :  'Not Available' ,action : 'view detail'},
       ]);
 
       constructor(){

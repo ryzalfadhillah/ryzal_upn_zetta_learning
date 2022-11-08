@@ -1,1 +1,14 @@
-<p>employee-detail works!</p>
+<button mat-button [routerLink]="['.employee.','table']">Back</button>
+<div class="card">
+    <ul>
+
+        <li>
+            <h1> {{employee?.name}}</h1>
+        </li>
+        <li>
+            <h2> {{employee?.position}} | {{employee?.availability}}</h2>
+        </li>
+
+    </ul>
+
+</div>
