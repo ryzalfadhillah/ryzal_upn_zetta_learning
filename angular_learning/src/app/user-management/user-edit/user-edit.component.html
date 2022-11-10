@@ -1,13 +1,13 @@
 <mat-card class="example-card">
-    <button mat-raised-button class="btn-back" [routerLink]="['..','list']">Back</button>
+    <button mat-raised-button class="btn-back" [routerLink]="['list']">Back</button>
     <mat-card-content class="atas">
         <form [formGroup]="form">
-            <mat-form-field class="example-full-width">
-                <mat-label>ID</mat-label>
-                <input type="text" matInput formControlName="id">
-                <mat-hint>ex : 123200053</mat-hint>
-            </mat-form-field>
-            <mat-form-field class="example-full-width">
+            <mat-list>
+                <mat-list-item> <span class="idd"> ID: {{list?.id}} </span></mat-list-item>
+                <mat-divider></mat-divider>
+
+            </mat-list>
+            <mat-form-field class="example-full-width" id="up">
                 <mat-label>Name</mat-label>
                 <input type="text" matInput formControlName="name">
             </mat-form-field>
@@ -17,16 +17,20 @@
                 <mat-error *ngIf="emailFormControl.hasError('required')">
                     Please enter a valid email address
                 </mat-error>
+
+
             </mat-form-field>
             <mat-form-field class="example-full-width">
                 <mat-label>Age</mat-label>
                 <input type="text" matInput formControlName="age">
             </mat-form-field>
+
             <mat-radio-group aria-label="Select an option" formControlName="gender">
                 <mat-label>Gender</mat-label>
                 <mat-radio-button value="Male">Male</mat-radio-button>
                 <mat-radio-button value="Female">Female</mat-radio-button>
             </mat-radio-group>
+
             <mat-form-field class="example-full-width">
                 <mat-label>Position</mat-label>
                 <mat-select formControlName="position">
@@ -35,6 +39,7 @@
                     </mat-option>
                 </mat-select>
             </mat-form-field>
+
             <mat-form-field class="example-full-width">
                 <mat-label>Marital Status</mat-label>
                 <mat-select formControlName="marital">
@@ -42,6 +47,7 @@
                     <mat-option value="Single"> Single </mat-option>
                 </mat-select>
             </mat-form-field>
+
             <ul formArrayName="addresgrup">
                 <li *ngFor="let group of addres.controls; let idx = index" [formGroupName]="idx">
                     <mat-form-field class="example-full-width">
@@ -62,9 +68,12 @@
                     </mat-form-field>
                 </li>
             </ul>
+
         </form>
     </mat-card-content>
+
 </mat-card>
 <div class="butt">
-    <button mat-raised-button [routerLink]="['..','list' ]" (click)="submit()" class="sbm">Submit</button>
+    <button mat-raised-button color="primary" [routerLink]="['..','list' ]" (click)="submit()" class="sbm">Edit</button>
+
 </div>
