@@ -13,10 +13,12 @@
             <table>
                 <tr>
                     <td>
-                        <a [routerLink]="['..','detail',list.id]" id="dtl">Detail</a>
+                        <button mat-button [routerLink]="['..','detail',list.id]" class="detail">Detail</button>
+                        <!-- <a [routerLink]="['..','detail',list.id]" id="dtl">Detail</a> -->
                     </td>
                     <td>
-                        <a [routerLink]="['..','edit' ,list.id]" id="ubah">Ubah</a>
+                        <button mat-raised-button [routerLink]="['..','edit' ,list.id]" class="edit">Edit</button>
+                        <!-- <a [routerLink]="['..','edit' ,list.id]" id="ubah">Ubah</a> -->
                     </td>
                 </tr>
             </table>

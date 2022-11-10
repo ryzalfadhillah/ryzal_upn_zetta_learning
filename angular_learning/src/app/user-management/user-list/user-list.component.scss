@@ -53,11 +53,30 @@ h3{
     text-align: center;
 }
 
-#ubah{
-    color:red ;
+// #ubah{
+//     color:red ;
+// }
+// #dtl{
+//     color: blue;
+// }
+
+.detail {
+    border: 1px solid #395B64;
+    color: #395B64;
 }
-#dtl{
-    color: blue;
+
+.detail:hover {
+    background-color: #395B64;
+    color: #fff;
+}
+
+.edit {
+    background-color: #395B64;
+    color: #fff;
+}
+
+.edit:hover{
+    background-color: #29768d;
 }
 
 .btn-add {
