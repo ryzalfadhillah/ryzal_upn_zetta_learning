@@ -19,6 +19,7 @@ export class UserEditComponent implements OnInit {
   private listid : string|null =null
   public list : List|null = null
   public form : FormGroup 
+  public temp : any = this.list?.addresgrup.length
 
   constructor(private fb : FormBuilder ,private router : Router, private Service : UserService  ,private route : ActivatedRoute) { 
 
@@ -34,8 +35,6 @@ export class UserEditComponent implements OnInit {
       addresgrup : this.fb.array([this.adressformgrup()])
       
     })
-
-   
 
     if(typeof this.listid === 'string'){
       this.list = this.Service.getListById(this.listid)
@@ -64,8 +63,8 @@ export class UserEditComponent implements OnInit {
       position : [this.list?.position ,[Validators.required]],
       marital : [this.list?.marital ,[Validators.required]],
       addresgrup : this.fb.array([this.adressformgrup()])
-      
     })
+    this.adddt(this.list?.addresgrup.length)
   }
   poss: pos[] = [
     {value: 'Manager', viewValue: 'Manager'},
@@ -77,6 +76,18 @@ export class UserEditComponent implements OnInit {
     return this.form.get('addresgrup')as FormArray
   }
   
+  adddt(tot : any) {
+    for (let index = 1; index < tot; index++) {
+      (<FormArray>this.form.get('addresgrup')).push(new FormGroup({
+        addres: new FormControl(this.list?.addresgrup[index].addres , [Validators.required]),
+        zip: new FormControl(this.list?.addresgrup[index].zip  ,[Validators.required,Validators.minLength(6),Validators.maxLength(9)]),
+        city: new FormControl(this.list?.addresgrup[index].city  ,[Validators.required]),
+        country: new FormControl(this.list?.addresgrup[index].country  ,[Validators.required])
+      }))
+      console.log();
+    }
+  }
+
   adressformgrup() : FormGroup {
     return this.fb.group({
       addres : [this.list?.addresgrup[0].addres ,[Validators.required]],
@@ -95,6 +106,13 @@ export class UserEditComponent implements OnInit {
     
   }
 
-
+  add() {
+    (<FormArray>this.form.get('addresgrup')).push(new FormGroup({
+      addres: new FormControl(null , [Validators.required]),
+      zip: new FormControl(null ,[Validators.required,Validators.minLength(6),Validators.maxLength(9)]),
+      city: new FormControl(null ,[Validators.required]),
+      country: new FormControl(null ,[Validators.required])
+    }))
+  }
 
 }
