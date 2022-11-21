@@ -10,12 +10,15 @@ import { User, UserService } from '../user.service';
 export class UserListComponent implements OnInit {
 
   public list : Observable<User[]>
+  users;
 
   constructor(private service : UserService) { 
     this.list = this.service.users$
-    console.log(this.list);
+    this.users = this.service.getAllUser();
   }
 
+  filterString : string= ''
+  
   ngOnInit(): void {
   }
 

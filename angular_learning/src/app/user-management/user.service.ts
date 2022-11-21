@@ -30,6 +30,10 @@ export class UserService {
     console.log(this._users);
   }
 
+  getAllUser(){
+    return this._users
+  }
+
   getListById(id:string) : any{
     const listarray = this._users.getValue();
     console.log(listarray)

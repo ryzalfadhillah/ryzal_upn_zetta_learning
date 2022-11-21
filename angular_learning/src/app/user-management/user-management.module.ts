@@ -18,14 +18,16 @@ import {MatDividerModule} from '@angular/material/divider';
 import {MatListModule} from '@angular/material/list'
 import {ReactiveFormsModule} from '@angular/forms';
 import { UpperCasePipe } from '@angular/common';
-
+import { FilterPipe } from './filter.pipe';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     UserListComponent,
     UserCreationComponent,
     UserDetailComponent,
-    UserEditComponent
+    UserEditComponent,
+    FilterPipe
   ],
   imports: [
     CommonModule,
@@ -40,7 +42,8 @@ import { UpperCasePipe } from '@angular/common';
     MatToolbarModule,
     MatDividerModule,
     UpperCasePipe,
-    MatListModule
+    MatListModule,
+    FormsModule
   ]
 })
 export class UserManagementModule { }
